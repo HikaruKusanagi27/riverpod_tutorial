@@ -31,22 +31,6 @@ final counterProvider = StateNotifierProvider<CounterNotifier, CounterState>((
   return CounterNotifier();
 });
 
-// 状態を操作するクラス
-class CounterNotifier extends StateNotifier<CounterState> {
-  CounterNotifier() : super(const CounterState());
-
-  void increment() {
-    state = state.copyWith(
-      count: state.count + 1,
-      message: "カウントが増えました: ${state.count + 1}",
-    );
-  }
-
-  void resetMessage() {
-    state = state.copyWith(message: '');
-  }
-}
-
 // Riverpodを使用したカウンターウィジェット
 class RiverpodCounterPage extends ConsumerWidget {
   const RiverpodCounterPage({super.key});
