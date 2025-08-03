@@ -8,8 +8,21 @@ class CounterStatefullPage extends StatefulWidget {
 }
 
 class _CounterStatefullPageState extends State<CounterStatefullPage> {
+  int count = 0;
+
+  void increment() {
+    setState(() {
+      count++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(title: Text('CounterStatefullPage')),
+      body: Center(
+        child: Column(children: [Text('ボタンを押した回数:'), Text('$count')]),
+      ),
+    );
   }
 }
