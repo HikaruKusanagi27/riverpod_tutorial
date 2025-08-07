@@ -21,7 +21,14 @@ class _CounterStatefullPageState extends State<CounterStatefullPage> {
     return Scaffold(
       appBar: AppBar(title: Text('CounterStatefullPage')),
       body: Center(
-        child: Column(children: [Text('ボタンを押した回数:'), Text('$count')]),
+        child: Column(
+          children: [
+            Text('ボタンを押した回数:'),
+            Text('$count'),
+            ElevatedButton(onPressed: increment, child: Text('カウントアップ')),
+            Container(),
+          ],
+        ),
       ),
     );
   }
