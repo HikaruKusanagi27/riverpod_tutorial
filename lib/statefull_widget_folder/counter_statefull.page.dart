@@ -9,10 +9,18 @@ class CounterStatefullPage extends StatefulWidget {
 
 class _CounterStatefullPageState extends State<CounterStatefullPage> {
   int count = 0;
+  Color backgroundColor = Colors.red;
 
   void increment() {
     setState(() {
       count++;
+    });
+  }
+
+  void changeColor() {
+    setState(() {
+      backgroundColor =
+          backgroundColor == Colors.red ? Colors.blue : Colors.red;
     });
   }
 
