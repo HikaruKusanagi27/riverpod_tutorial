@@ -33,8 +33,8 @@ class _CounterStatefullPageState extends State<CounterStatefullPage> {
           children: [
             Text('ボタンを押した回数:'),
             Text('$count'),
-            ElevatedButton(onPressed: increment, child: Text('カウントアップ')),
-            Container(),
+            ElevatedButton(onPressed: changeColor, child: Text('カウントアップ')),
+            Container(height: 300, width: 300, color: backgroundColor),
           ],
         ),
       ),
