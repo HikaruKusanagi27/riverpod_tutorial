@@ -42,6 +42,9 @@ dependencies:
   # Freezed パッケージ
   freezed_annotation: ^2.4.1
   json_annotation: ^4.8.1
+  
+  # go_router パッケージ
+  go_router: ^16.1.0
 
 dev_dependencies:
   flutter_test:
