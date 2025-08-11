@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_tutorial/go_router_folder/go_router_page.dart';
 import 'package:riverpod_tutorial/statefull_widget_folder/counter_statefull.page.dart';
 import 'counter_state.dart';
 
@@ -58,6 +59,15 @@ class MyHomePage extends StatelessWidget {
               );
             },
             child: const Text('RiverpodCounterPage'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const GoRouterPage()),
+              );
+            },
+            child: const Text('GoRoterPage'),
           ),
         ],
       ),
