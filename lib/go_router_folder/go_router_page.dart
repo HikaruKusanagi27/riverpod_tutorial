@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:riverpod_tutorial/home_page.dart';
+import 'package:riverpod_tutorial/statefull_widget_folder/counter_statefull.page.dart';
 
-class GoRouterPage extends StatefulWidget {
-  const GoRouterPage({super.key});
+class GoRouterPage extends StatelessWidget {
+  GoRouterPage({super.key});
 
-  @override
-  State<GoRouterPage> createState() => _GoRouterPageState();
-}
+  final router = GoRouter(
+    initialLocation: '/a',
+    routes: [
+      GoRoute(path: '/a', builder: (context, state) => CounterStatefullPage()),
+      GoRoute(path: '/b', builder: (context, state) => RiverpodCounterPage()),
+    ],
+  );
 
-class _GoRouterPageState extends State<GoRouterPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp.router(
+      routeInformationProvider: router.routeInformationProvider,
+      routeInformationParser: router.routeInformationParser,
+      routerDelegate: router.routerDelegate,
+    );
   }
 }
