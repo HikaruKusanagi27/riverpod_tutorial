@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_tutorial/counter_state.dart';
-import 'package:riverpod_tutorial/statefull_widget_folder/counter_statefull.page.dart';
+import 'package:riverpod_tutorial/router/router.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -17,12 +17,7 @@ class HomePage extends StatelessWidget {
         children: [
           ElevatedButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const CounterStatefullPage(),
-                ),
-              );
+              const CounterStatefullRoute().push(context);
             },
             child: const Text('CounterStatefullPage'),
           ),
