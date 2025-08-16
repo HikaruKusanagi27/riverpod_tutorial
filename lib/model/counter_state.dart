@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'counter_state.freezed.dart';
-part 'counter_state.g.dart';
+part '../counter_state.freezed.dart';
+part '../counter_state.g.dart';
 
 @freezed
 class CounterState with _$CounterState {
