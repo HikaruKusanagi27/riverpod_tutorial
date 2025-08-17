@@ -52,16 +52,16 @@ class RiverpodCounterPage extends ConsumerWidget {
     final state = ref.watch(counterProvider);
     final notifier = ref.read(counterProvider.notifier);
 
-    // // 状態変化を監視
-    // ref.listen<CounterState>(counterProvider, (previous, next) {
-    //   if (next.message.isNotEmpty) {
-    //     ScaffoldMessenger.of(
-    //       context,
-    //     ).showSnackBar(SnackBar(content: Text(next.message)));
-    //     // メッセージをリセット
-    //     notifier.resetMessage();
-    //   }
-    // });
+    // プロバイダの値を監視し、値が変化するたびに呼び出されるコールバック関数（画面遷移、ダイアログの表示など）を登録する。
+    ref.listen<CounterState>(counterProvider, (previous, next) {
+      if (next.message.isNotEmpty) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(next.message)));
+        // メッセージをリセット
+        notifier.resetMessage();
+      }
+    });
 
     return Scaffold(
       appBar: AppBar(
