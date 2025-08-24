@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // zennの記事にて名前付きコンストラクタを学ぶ
 // https://zenn.dev/zawa_kyo/articles/afd1760c08f233
 // 公式ドキュメントhttps://dart.dev/language/constructors#named-constructors
+
 class MyWidget extends StatelessWidget {
   const MyWidget({super.key});
 
@@ -22,11 +23,8 @@ class Point {
 
   // Sets the x and y instance variables
   // before the constructor body runs.
-  Point(this.x, this.y);
+  Point(this.x, this.y); //イ　ンスタンス 完成品
 
   // Named constructor
-  Point.origin() {
-    x = xOrigin;
-    y = yOrigin;
-  }
+  Point.origin() : x = xOrigin, y = yOrigin;
 }
