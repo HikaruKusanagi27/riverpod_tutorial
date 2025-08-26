@@ -28,3 +28,18 @@ class Point {
   // Named constructor
   Point.origin() : x = xOrigin, y = yOrigin;
 }
+
+const double test1 = 0;
+const double test2 = 0;
+
+class Test {
+  final double x;
+  final double y;
+
+  // Sets the x and y instance variables
+  // before the constructor body runs.
+  Test(this.x, this.y); //イ　ンスタンス 完成品
+
+  // Named constructor
+  Test.note() : x = test1, y = test2;
+}
