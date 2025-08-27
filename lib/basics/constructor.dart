@@ -14,7 +14,7 @@ class MyWidget extends StatelessWidget {
 }
 
 // 公式サンプル
-const double xOrigin = 0;
+const double xOrigin = 0; // もし原点の位置を変更したくなっても変数の値を変更すれば済む
 const double yOrigin = 0;
 
 class Point {
@@ -27,19 +27,7 @@ class Point {
 
   // Named constructor
   Point.origin() : x = xOrigin, y = yOrigin;
-}
 
-const double test1 = 0;
-const double test2 = 0;
-
-class Test {
-  final double x;
-  final double y;
-
-  // Sets the x and y instance variables
-  // before the constructor body runs.
-  Test(this.x, this.y); //イ　ンスタンス 完成品
-
-  // Named constructor
-  Test.note() : x = test1, y = test2;
+  // パターン1（直接書いた場合）
+  // Point.origin() : x = 0, y = 0;
 }
