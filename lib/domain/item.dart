@@ -1,11 +1,10 @@
 /// 例：　希望する対応アクションenum（固定値）
 enum DesiredActionType {
-  exchange('exchange', '交換'),
-  refund('refund', '返金'),
-  backOrder('back_order', '取り寄せ'),
-  returnItem('return', '返品');
+  exchange('exchange', '応募済み'),
+  refund('refund', '抽選結果'); //enumの値名変更
 
-  const DesiredActionType(this.code, this.label);
-  final String code;
+  const DesiredActionType(this.label, this.name);
+
   final String label;
+  final String name;
 }
