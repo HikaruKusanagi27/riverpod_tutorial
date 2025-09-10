@@ -45,6 +45,9 @@ dependencies:
   
   # go_router パッケージ
   go_router: ^16.1.0
+  
+  # shimmer パッケージ
+  shimmer: ^3.0.0
 
 dev_dependencies:
   flutter_test:
