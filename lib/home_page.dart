@@ -13,24 +13,30 @@ class HomePage extends StatelessWidget {
         title: const Text('Home画面'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: Column(
-        children: [
-          ElevatedButton(
-            onPressed: () {
-              const CounterStatefullRoute().push(context);
-            },
-            child: const Text('CounterStatefullPage'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => RiverpodCounterPage()),
-              );
-            },
-            child: const Text('RiverpodCounterPage'),
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                const CounterStatefullRoute().push(context);
+              },
+              child: const Text('CounterStatefullPage'),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => RiverpodCounterPage(),
+                  ),
+                );
+              },
+              child: const Text('RiverpodCounterPage'),
+            ),
+          ],
+        ),
       ),
     );
   }
