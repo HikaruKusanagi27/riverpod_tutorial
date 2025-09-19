@@ -18,7 +18,10 @@ class MyApp extends StatelessWidget {
     initialLocation: '/a',
     routes: [
       GoRoute(path: '/a', builder: (context, state) => HomePage()),
-      GoRoute(path: '/b', builder: (context, state) => CounterStatefullPage()),
+      GoRoute(
+        path: '/CounterStatefullPage',
+        builder: (context, state) => CounterStatefullPage(),
+      ),
       GoRoute(path: '/c', builder: (context, state) => RiverpodCounterPage()),
     ],
   );
