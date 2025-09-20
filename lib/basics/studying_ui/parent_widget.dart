@@ -10,15 +10,18 @@ class ParentWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            Text(
-              '親Widget画面',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            ChildWidget(),
-          ],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              Text(
+                '親Widget画面',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+              ChildWidget(),
+            ],
+          ),
         ),
       ),
     );
