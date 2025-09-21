@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:riverpod_tutorial/home_page.dart';
 import 'package:riverpod_tutorial/statefull_widget_folder/counter_statefull.page.dart';
 
 // class RouterPage extends StatelessWidget {
 //   RouterPage({super.key});
 
 //   final router = GoRouter(
+//     // ←これがインスタンス変数
 //     initialLocation: '/a',
 //     routes: [
 //       GoRoute(path: '/a', builder: (context, state) => HomePage()),
-//       GoRoute(path: '/b', builder: (context, state) => CounterStatefullPage()),
-//       GoRoute(path: '/c', builder: (context, state) => RiverpodCounterPage()),
+//       GoRoute(
+//         path: '/CounterStatefullPage',
+//         builder: (context, state) => const CounterStatefullPage(),
+//       ),
 //     ],
 //   );
 
@@ -24,11 +28,12 @@ import 'package:riverpod_tutorial/statefull_widget_folder/counter_statefull.page
 //   }
 // }
 
-class CounterStatefullRoute extends GoRouteData {
-  const CounterStatefullRoute();
+// @TypedGoRoute<CounterStatefullRoute>(path: '/counter')
+// class CounterStatefullRoute extends GoRouteData {
+//   const CounterStatefullRoute();
 
-  @override
-  Widget build(BuildContext context, GoRouterState state) {
-    return const CounterStatefullPage();
-  }
-}
+//   @override
+//   Widget build(BuildContext context, GoRouterState state) {
+//     return const CounterStatefullPage();
+//   }
+// }
