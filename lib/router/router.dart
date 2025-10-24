@@ -29,4 +29,4 @@ import 'package:riverpod_tutorial/statefull_widget_folder/counter_statefull.page
 // }
 
 // @TypedGoRoute<CounterStatefullRoute>(path: '/counter')
-// class CounterStatefullRoute ext
+// class CounterStatefullRoute ex
