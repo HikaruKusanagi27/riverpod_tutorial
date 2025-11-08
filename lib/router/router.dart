@@ -24,7 +24,7 @@ import 'package:riverpod_tutorial/statefull_widget_folder/counter_statefull.page
 //       routeInformationProvider: router.routeInformationProvider,
 //       routeInformationParser: router.routeInformationParser,
 //       routerDelegate: router.routerDelegate,
-//     );
+//     )
 //   }
 // }
 
